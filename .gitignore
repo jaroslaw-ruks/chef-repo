@@ -1,1 +1,4 @@
 .delivery/*
+.*un~
+.*.swp
+*.lock

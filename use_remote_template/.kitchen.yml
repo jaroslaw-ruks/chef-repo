@@ -11,18 +11,18 @@ provisioner:
   client_rb:
     chef_license: accept
 
-    #verifier:
-    #  name: inspec
+  #verifier:
+  #name: inspec
 
 platforms:
   - name: ubuntu-18.04
   - name: debian/stretch64
 
+
 suites:
   - name: default
     run_list:
-      - recipe[bootstrap::default]
-      - recipe[bootstrap::use-template]
+      - recipe[use_remote_template::default]
     verifier:
       inspec_tests:
         - test/smoke/default
